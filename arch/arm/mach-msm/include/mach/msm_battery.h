@@ -29,6 +29,17 @@ struct msm_psy_batt_pdata {
 	void  (*power_off_device)(void);
 #endif
 };
+
+struct msm_batt_gauge {
+	int (*get_battery_mvolts) (void);
+	int (*get_battery_temperature) (void);
+	int (*is_battery_present) (void);
+	int (*is_battery_temp_within_range) (void);
+	int (*is_battery_id_valid) (void);
+	int (*get_battery_status)(void);
+	int (*get_batt_remaining_capacity) (void);
+};
+
 #ifdef CONFIG_LGE_FUEL_GAUGE
 u32 msm_batt_get_vbatt_capacity(void);
 #endif
