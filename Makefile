@@ -376,7 +376,7 @@ KBUILD_CPPFLAGS := -D__KERNEL__
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common \
 		   -Werror-implicit-function-declaration \
-		   -Wno-format-security \
+		   -Wno-format-security -Wunused-variable \
 		   -fno-delete-null-pointer-checks \
 		   -marm -mfloat-abi=softfp -march=armv7-a -mfpu=neon \
 		   -ffast-math -pipe -funswitch-loops -fpredictive-commoning \
